@@ -1,8 +1,15 @@
-
+<!-- render the @posts title and content
+      from :
+        get '/posts/:id' do
+          @post = Post.find(params[:id])
+          erb :show
+        end
+      -->
+      <!-- READ -->
   <%=@post.name%>
   <%=@post.content%>
 
-
+<!-- DELETE -->
 <form method="post" action="/posts/<%= @post.id %>/delete">
   <input id="hidden" type="hidden" name="_method" value="delete">
   <input type="submit" value="delete">
