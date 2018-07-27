@@ -1,3 +1,11 @@
+<!-- iterates over @posts
+			from:
+					get '/posts' do
+						 @posts = Post.all
+						 erb :index
+					end
+					and renders them -->
+
 <% @posts.each do |post| %>
 	<p><%= post.name %></p>
 <% end %>
